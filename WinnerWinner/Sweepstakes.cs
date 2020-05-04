@@ -35,6 +35,22 @@ namespace WinnerWinner
             UserInterface.DisplayContestantInfo(contestant.FirstName, contestant.LastName, contestant.EmailAddress, contestant.RegistrationNumber);
         }
 
+        public void NotifyContestants(IContestant contestant)
+        {
+            Contestant winner = PickWinner();
+            foreach (KeyValuePair<int, Contestant> key in contestants)
+            {
+                if (winner.EmailAddress == key.Value.EmailAddress)
+                {
+                    UserInterface.NotifyWinner(winner.FirstName, winner.LastName);
+                }
+                else
+                {
+                    contestant.Notify(contestant);
+                }
+            }
+        }
+
     }
     }
 
