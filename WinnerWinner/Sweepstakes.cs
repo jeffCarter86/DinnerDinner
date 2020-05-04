@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace WinnerWinner
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         Dictionary<int, Contestant> contestants;
         string name;
         public string Name { get; }
+
+        public Sweepstakes(string name)
+        {
+            contestants = new Dictionary<int, Contestant>();
+            this.name = name;
+        }
 
         public void RegisterContestant(Contestant contestant)
         {
@@ -26,7 +32,7 @@ namespace WinnerWinner
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            UserInterface.DisplayContestantInfo(contestant.FirstName, contestant.LastName, contestant.EmailAddress, contestant.RegistrationNumber);
         }
 
     }

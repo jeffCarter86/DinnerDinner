@@ -8,7 +8,7 @@ namespace WinnerWinner
 {
     class ManagerFactory
     {
-        public ISweepstakesManager ChooseManagerType(string input)
+        public class ManagerFactory ISweepstakesManager ChooseManagerType(string input)
         {
             switch (input.ToLower())
             {
