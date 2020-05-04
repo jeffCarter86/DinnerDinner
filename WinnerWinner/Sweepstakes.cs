@@ -14,7 +14,7 @@ namespace WinnerWinner
 
         public void RegisterContestant(Contestant contestant)
         {
-            contestants.Add(contestant.RegistrationNumber, contestant);
+            contestants.Add(contestants.Count, contestant);
         }
         public Contestant PickWinner()
         {

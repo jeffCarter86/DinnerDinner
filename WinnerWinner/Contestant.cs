@@ -12,5 +12,13 @@ namespace WinnerWinner
         public string LastName;
         public string EmailAddress;
         public int RegistrationNumber;
+
+        public Contestant(string firstName, string lastName, string emailAddress, int registrationNumber)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            EmailAddress = emailAddress;
+            RegistrationNumber = registrationNumber;
+        }
     }
 }

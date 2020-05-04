@@ -8,5 +8,9 @@ namespace WinnerWinner
 {
     class Simulation
     {
+        public void CreateMarketingFirmWithManager()
+        {
+
+        }
     }
 }

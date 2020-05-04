@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinnerWinner
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
         Queue<Sweepstakes> queue;
 
