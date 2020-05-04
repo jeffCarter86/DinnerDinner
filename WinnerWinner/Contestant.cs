@@ -8,17 +8,21 @@ namespace WinnerWinner
 {
     class Contestant
     {
-        public string FirstName;
-        public string LastName;
-        public string EmailAddress;
-        public int RegistrationNumber;
+        string firstName;
+        string lastName;
+        string emailAddress;
+        int registrationNumber;
 
-        public Contestant(string firstName, string lastName, string emailAddress, int registrationNumber)
+        public string FirstName { get; }
+        public string LastName { get; }
+        public string EmailAddress { get; }
+        public int RegistrationNumber { get; }
+        public Contestant(int registrationNumber)
+       
         {
-            FirstName = firstName;
-            LastName = lastName;
-            EmailAddress = emailAddress;
-            RegistrationNumber = registrationNumber;
+            firstName = UserInterface.GetUserInputFor("input"); //be more specific once UI created
+            lastName = UserInterface.GetUserInputFor("input");//be more specific once UI created
+            emailAddress = UserInterface.GetUserInputFor("input"); //be more specific once UI created
+            this.registrationNumber = registrationNumber;
         }
-    }
 }
