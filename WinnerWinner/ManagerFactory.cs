@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinnerWinner
 {
-    class ManagerFactory
+    public class ManagerFactory
     {
-        public class ManagerFactory ISweepstakesManager ChooseManagerType(string input)
+
+        public ISweepstakesManager ChooseManagerType(string input)
         {
             switch (input.ToLower())
             {
